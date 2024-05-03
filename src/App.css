@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+/* App.css */
+body {
+  background-image: url('./components/Images/BACKGROUND.png');
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
 }
+/* Main.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Default styles for desktop view */
+.container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically */
+}
+
+.text-info {
+  flex: 1;
+  padding: 20px;
+  order: 1; /* Set the initial order */
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  order: 2; /* Set the initial order */
+}
+
+.image-container img {
+  margin-top: 1.2rem;
+  max-width: 80%;
+  border-radius: 10px;
+  height: auto;
+}
+
+button {
+  background-color: orange;
   color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  height: 4rem;
+  width: 30rem;
+  border-radius: 10px;
+  border: none;
+  margin-left: 5rem;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+p {
+  font-weight: 300;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Change to column layout for mobile */
   }
-  to {
-    transform: rotate(360deg);
+
+  .text-info {
+    order: 2; /* Change the order of the div */
+  }
+
+  .image-container {
+    order: 1; /* Change the order of the div */
   }
 }
